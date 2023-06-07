@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { ReactDOM } from 'react-dom';
 import './index.css';
 import { Route, Switch, Router, BrowserRouter } from 'react-router-dom';
@@ -8,6 +8,13 @@ import Footer from './components/footer';
 
 const routing=(
   <Router>
-    
+    <React.StrictMode>
+    <Header />
+      <Switch>
+        <Route exact path= "/" component= {App} />
+      </Switch>
+    <Footer />
+
+    </React.StrictMode>
   </Router>
-)
+);
